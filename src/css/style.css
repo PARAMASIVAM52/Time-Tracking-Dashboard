@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.main-block {
+  width: 100%;
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 900px) {
+  .main-block {
+    grid-template-columns: 255px 1fr;
+  }
+}
+
+.profile-div-data {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.profile-div-data .pro-img {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 900px) {
+  .profile-div-data .pro-img {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 80px;
+  }
+}
+.profile-div-data .pro-img img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.profile-div-data .pro-img .pro-text-wrapper p {
+  color: hsl(236, 100%, 87%);
+  font-size: 14px;
+}
+.profile-div-data .pro-img .pro-text-wrapper h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 4px;
+}
+@media (min-width: 900px) {
+  .profile-div-data .pro-img .pro-text-wrapper h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+.profile-div-data .pro-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+}
+@media (min-width: 900px) {
+  .profile-div-data .pro-nav {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 30px;
+  }
+}
+.profile-div-data .pro-nav a {
+  text-decoration: none;
+  color: hsl(235, 45%, 61%);
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+.profile-div-data .pro-nav a:hover, .profile-div-data .pro-nav a.active {
+  color: #fff;
+}
+
+.info-div-data {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 600px) {
+  .info-div-data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .info-div-data {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-block {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 45px;
+  background-repeat: no-repeat;
+  background-position: top -10px right 20px;
+}
+.info-block.work {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("../assets/images/icon-work.svg");
+}
+.info-block.play {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("../assets/images/icon-play.svg");
+}
+.info-block.study {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("../assets/images/icon-study.svg");
+}
+.info-block.exercise {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("../assets/images/icon-exercise.svg");
+  background-position: top -1px right 20px;
+}
+.info-block.social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("../assets/images/icon-social.svg");
+}
+.info-block.self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("../assets/images/icon-self-care.svg");
+}
+.info-block .info-content {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 28px;
+  height: calc(100% + 5px);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.info-block .info-content:hover {
+  background-color: hsl(235, 45%, 30%);
+}
+.info-block .in-con-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.info-block .in-con-head p {
+  font-weight: 500;
+  color: #fff;
+  font-size: 18px;
+}
+.info-block .in-con-head .ellipsis-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+.info-block .in-con-head .ellipsis-icon:hover {
+  opacity: 1;
+}
+.info-block .time-stat-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .info-block .time-stat-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+.info-block .time-stat-box h1 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 32px;
+}
+@media (min-width: 900px) {
+  .info-block .time-stat-box h1 {
+    font-size: 56px;
+  }
+}
+.info-block .time-stat-box .previous-stat {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+}
+
+.attribution {
+  margin-top: 40px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(236, 100%, 87%);
+}
+.attribution a {
+  color: hsl(246, 80%, 60%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
